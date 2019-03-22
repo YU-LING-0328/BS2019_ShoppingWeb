@@ -1,0 +1,479 @@
+@import "normalize";
+
+$base-color:#000;
+$text-color:#555;
+
+html {
+    font-size: 16px;
+    font-family: Microsoft JhengHei;// 微軟正黑體;PMingLiU 新細明體
+    line-height: 1.4;
+    color: $text-color;
+  }
+img {
+    max-width: 100%;
+}  
+a {
+    color:$text-color;
+    text-decoration: none;
+
+    &:hover {
+        color: #0081c3;
+        text-decoration: underline;
+    }
+}
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.page-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+%nostyle-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;/*清除ul預設的項目符號*/
+}
+//========================Propaganda============================
+.page-header {
+    height: 50px;
+    line-height: 50px;
+    background: $base-color;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+//==========================main-menu===========================
+.main-menu {
+    height: 80px;
+    line-height: 80px;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    ul {
+       @extend %nostyle-list;
+        font-size: 1.2em;
+    }
+}
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 360px;
+    a {
+        display: block;/*block->區塊元素的預設值*/
+        width: 120px;
+        height: 80px;
+        text-align: center;
+        text-decoration: none;/*文字底線*/
+        font-weight: bold;
+        transition-property: background;
+        transition-duration: .3s;
+        &:hover {
+            background:mix($base-color,#fff, 50);
+            color: #fff;
+        }
+    }
+}
+
+.page-title {
+    h1 {
+        position: absolute;
+        margin: 0 ;
+        font-weight: bold;
+        color: #000;
+        right: 46%;
+    }
+}
+
+.community-website {
+    display: flex;
+    justify-content: space-around;
+    
+    a {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding-right: 15px;
+        &:hover {
+            background: mix($base-color,#fff,50%);
+            background-size: 10px 10px;/*原圖是20*20(2x)*/
+            border-radius: 50%;/*圓形時可用*/
+        }
+    }
+    .fas.fa-shopping-cart {
+        padding-left:20px;
+    }
+}
+//========================Page1-index-image===========================
+.index-image {
+    height: 600px;
+    background: url(http://placekitten.com/g/1080/500)center center no-repeat;/*置中,圖不重複填滿*/
+    background-size: cover;/*圖片滿版*/
+    position: relative;/*參照容器*/
+
+    h2 {
+        font-size: 70px;
+        font-weight: inherit;//預設
+        color: #fff;/*給一些不支援CSS3的瀏覽器用*/
+        color: rgba(255,255,255,0.8);
+        text-shadow: rgba(#fff,0.9) 0 0 0px,rgba(#000,0.8) 0 0 8px;//文字陰影(一次可以有很多組),X軸 Y軸 陰影寬度
+        position: absolute;/*絕對定位*/
+        margin: 0 -110px 0 0;/*上 右 下 左*/
+        right: 50%;
+        top: 120px;
+    }
+}
+//=========================Page1-hot-block===========================
+.hot-title {
+    h1 {
+        height: 160px;
+        line-height: 160px;
+        margin: 0 0;
+        text-align: center;
+        font-size: 3em;
+        color: #000;
+    }
+}
+.hot-item {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        @extend %nostyle-list;
+    }
+    h2 {
+        margin: 0 0;
+        text-align: center;
+    }
+    a {
+        color: #000;
+        //text-align: center;
+    }
+    p {
+        font-weight: bold;
+        margin: 0 0 30px;
+        text-align: center;
+    }
+}
+//========================Page1-web-page-introduction===========================
+.web-page-introduction {
+    height: 350px;
+    background: mix($base-color,#fff,40%);
+
+    dl {
+        margin: 0 0;
+        text-align: center;
+        color: #fff;
+    }
+    dt {
+        height: 140px;
+        line-height: 150px;
+        font-size: 3em;
+        margin-top: 10px;
+    }
+}
+//===========================newsletter===========================
+.newsletter {
+    height: 350px;
+    background: mix($base-color,#fff,2%);
+
+    h1 {
+        margin: 0 0;
+        color: mix($base-color,rgb(12, 12, 12),90%);
+        text-align: center;
+        padding: 60px 0 30px;
+    }
+    span {
+        display: block;
+    }
+}
+.booking {
+        text-align: center;
+    i {
+        position: relative;
+        left: 30px;
+        top:1px;
+    }
+    .input-email {
+        width: 560px;
+        border: none;
+        border-bottom: 1px solid #a4acb3;
+        background: mix($base-color,#fff,2%);
+        padding-left: 40px;
+        padding-bottom: 10px;
+    }
+
+    .input-booking {
+        width: 600px;
+        height: 40px;
+        border: 0;
+        padding: 0 0;
+        background: $base-color;
+        color: mix($base-color,#fff,0%);
+        margin: 30px 0;
+        &:focus {
+            outline: none;//button外圍的藍框
+            
+        }
+    }
+}
+//===========================bottom-menu===========================
+.bottom-menu {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: mix($base-color,#fff,80%);
+    ul {
+        display: flex;
+        justify-content: center;
+        @extend %nostyle-list;
+        font-weight: bold;
+    }
+    a {
+        display: block;
+        width: 100px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        transition-property: background;
+        transition-duration: .3s;
+
+        &:hover {
+            background: mix($base-color,#fff,75%);
+        }
+    }
+}
+//===========================page-footer===========================
+.page-footer {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    background: mix($base-color,#fff,20%);
+}
+//=========================Page2(頂部)-sort-tag===========================
+.sort-tag {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px auto;
+
+    span {
+        color: mix($base-color,#fff,20%);
+    }
+}
+//=========================Page2(左)-item-img===========================
+.item-summary {
+    margin-top: 60px;
+    .page-container {
+        display: flex;
+    }
+}
+
+.item-img {
+    width: 500px;
+     //flex: 0 0 450px;
+    
+    a {
+        display: block;
+        margin-bottom:30px;
+    }
+}
+.item-text {
+    width: 500px;
+    
+    p {
+        margin: 20px 0 25px;
+        font-weight: bold;
+    }
+}
+//=========================Page2(右上)-item-details===========================
+.right {
+    width: 300px;
+    margin-left: 25px;
+}
+.item-details {
+    border-bottom: 1px solid #a4acb3;
+
+    h2 {
+        margin: 0 0;
+        span {
+            display: inline-block;
+            font-size: 0.6em;
+            color: darken($text-color, 10%);
+        }
+    }
+    p {
+        margin: 20px 0 10px;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    ul {
+        @extend %nostyle-list;
+        padding: 5px 0;
+        font-weight: bold;
+        li {
+            padding: 5px 0;
+        }
+        li select {
+            color: $text-color;
+        }
+    }
+}
+.item-standard {
+    width: 300px;
+    height: 40px;
+}
+.purchase-quantity {
+    width: 60px;
+    height: 30px;
+    padding-left: 10px;
+}
+.put-cart {
+    width: 300px;
+    height: 40px;
+    border: 0;
+    padding: 0 0;
+    background: $base-color;
+    color: mix($base-color,#fff,0%);
+    margin: 15px 0 25px;
+    cursor: pointer;//游標變手指圖
+    &:focus {
+        outline: none;//button外圍的藍框
+    }
+}
+//=========================Page2(右下)-item-recommend===========================
+.item-recommend {
+    ul {
+        @extend %nostyle-list;
+        display: flex;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 1.2em;
+        align-items: center;//flex垂直置中
+    }
+}
+.item-information {
+    margin-left: 20px;
+}
+//=========================Page2(底部)-item-switch===========================
+.item-switch {
+    margin: 50px 0;
+    .page-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+//=========================Page3(頂部)-back-home===========================
+.back-home {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px auto;
+}
+//=========================Page3(上)-purchase-information===========================
+.cart-information table {
+    border-bottom: 1px solid #a4acb3;
+    th {
+        width: 100px;
+        color: #8c9399;
+        text-align: left;//文字置左
+        //border-bottom: 1px solid #a4acb3;
+    }
+    td {
+        width: 100px;
+    }
+    th:first-child {
+        width: 450px;
+    }
+    td:first-child {
+        width: 450px;
+        display: flex;
+        margin: 30px 0;
+        align-items: center;
+    }
+    th:last-child {
+       text-align: right;//文字置右
+    }
+    td:last-child {
+        text-align: right;//文字置右
+    }
+}
+.purchase-item-img {
+    width: 150px;
+    
+    a {
+        display: block;
+     }
+}
+.purchase-item-info {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 20px;
+    span {
+        display: inline-block;
+        padding: 0 0 10px;
+    }
+    span:nth-of-type(2) {
+        font-size: 0.7em;
+    }
+    a:nth-of-type(2) {
+        display: block;
+        color:#8c9399;
+        font-size: 0.9em;
+        text-decoration:underline;
+    }
+}
+//=========================Page3(下)-settle-block===========================
+.settle-block {
+    height: 200px;
+    padding: 20px 0;
+    td {
+        padding: 10px 0;
+    }
+    td:nth-child(1) {
+        text-align: right;
+    }
+    td:last-child {
+        text-align: right;
+    }
+}
+
+.discount-amount{
+    td {
+        width: 100px;
+    }
+    td:first-child {
+        width: 450px;
+        text-align: left;
+        padding: 0 0;
+    }
+    td:nth-child(2) {
+        text-align: right;
+    }
+}
+
+.discount-number {
+    width: 150px;
+    height: 30px;
+}
+
+.settle-button {
+    width: 300px;
+    height: 40px;
+    border: 0;
+    padding: 0 0;
+    background: $base-color;
+    color: mix($base-color,#fff,0%);
+    margin: 15px 0 25px;
+    float: right;
+    cursor: pointer;//游標變手指圖
+    &:focus {
+        outline: none;//button外圍的藍框
+    }
+}
