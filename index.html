@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ShoppingCart</title>
+    <title>Lose the plot</title>
     <!-- <link rel="stylesheet" href="stylesheets/normalize.css"> -->
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -17,7 +17,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-136790536-1');
     </script>
 </head>
@@ -37,19 +36,25 @@
                 <li><a href="#">聯絡我們</a></li>
             </ul>
             <div class="page-title">
-                <h1>剁手網</h1>
+                <a href="#">剁手網</a>
             </div>
             <ul class="community-website">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fas fa-globe-asia"></i></a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" title="追蹤我們 Facebook"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" title="追蹤我們 Instagram"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.globeasia.com/" target="_blank" title="追蹤我們 Globe Asia"><i
+                            class="fas fa-globe-asia"></i></a></li>
+                <li><a href="/BS2019_ShoppingWeb/cart.html" target="_blank" title="前往購物車"><i
+                            class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
     </nav>
     <!-- 主頁面_圖片 -->
     <div class="index-image">
-        <h2>我剁手，我驕傲。</h2>
+        <div class="container">
+            <h2>我剁手，我驕傲。</h2>
+        </div>
     </div>
     <!-- 主頁面_熱賣商品 -->
     <div class="hot-block">
@@ -60,78 +65,124 @@
             <div class="hot-item">
                 <ul>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/item.png" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">神采飛揚16色珠光眼影</a>
+                                </h2>
+                                <p>$1750</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion01.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion02.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion03.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion04.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion05.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="http://via.placeholder.com/250x250" alt="商品圖">
-                        </a>
-                        <h2>
-                            <a href="#">騙人剁手的商品</a>
-                        </h2>
-                        <p>$1300</p>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion06.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card hot-item-card">
+                            <div class="hot-img">
+                                <a href="/BS2019_ShoppingWeb/item.html">
+                                    <img src="/BS2019_ShoppingWeb/images/fashion07.jpeg" alt="商品圖">
+                                </a>
+                            </div>
+                            <div class="hot-text">
+                                <h2>
+                                    <a href="/BS2019_ShoppingWeb/item.html">騙人剁手的商品</a>
+                                </h2>
+                                <p>$1300</p>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>

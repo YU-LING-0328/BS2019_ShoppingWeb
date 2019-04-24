@@ -15,17 +15,13 @@ img {
 a {
     color:$text-color;
     text-decoration: none;
-
-    &:hover {
-        color: #0081c3;
-        text-decoration: underline;
-    }
+    transition-property: color;
+    transition-duration: .3s;
 }
 .container {
     width: 1080px;
     margin: 0 auto;
 }
-
 .page-container {
     width: 800px;
     margin: 0 auto;
@@ -36,7 +32,7 @@ a {
     padding: 0;
     list-style: none;/*清除ul預設的項目符號*/
 }
-//========================Propaganda============================
+//========================Propaganda宣傳============================
 .page-header {
     height: 50px;
     line-height: 50px;
@@ -70,7 +66,6 @@ a {
         width: 120px;
         height: 80px;
         text-align: center;
-        text-decoration: none;/*文字底線*/
         font-weight: bold;
         transition-property: background;
         transition-duration: .3s;
@@ -82,12 +77,13 @@ a {
 }
 
 .page-title {
-    h1 {
-        position: absolute;
-        margin: 0 ;
-        font-weight: bold;
+    position: absolute;
+    margin: 0 ;
+    font-weight: bold;
+    font-size: 2em;
+    right: 46%;
+    a {
         color: #000;
-        right: 46%;
     }
 }
 
@@ -101,9 +97,10 @@ a {
         text-align: center;
         padding-right: 15px;
         &:hover {
-            background: mix($base-color,#fff,50%);
-            background-size: 10px 10px;/*原圖是20*20(2x)*/
-            border-radius: 50%;/*圓形時可用*/
+            color: mix($base-color,#fff,40%);
+            // background: mix($base-color,#fff,50%);
+            // background-size: 10px 10px;/*原圖是20*20(2x)*/
+            // border-radius: 50%;/*圓形時可用*/
         }
     }
     .fas.fa-shopping-cart {
@@ -112,7 +109,7 @@ a {
 }
 //========================Page1-index-image===========================
 .index-image {
-    height: 600px;
+    height: 500px;
     background: url(http://placekitten.com/g/1080/500)center center no-repeat;/*置中,圖不重複填滿*/
     background-size: cover;/*圖片滿版*/
     position: relative;/*參照容器*/
@@ -143,22 +140,80 @@ a {
 .hot-item {
     ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         @extend %nostyle-list;
     }
+    
     h2 {
-        margin: 0 0;
+        margin: 0 0 5px;
         text-align: center;
     }
     a {
         color: #000;
-        //text-align: center;
+
+        &:hover {
+            color: mix($base-color,#fff,80%);
+        }
     }
     p {
         font-weight: bold;
-        margin: 0 0 30px;
+        //margin: 0 0 30px;
         text-align: center;
     }
+}
+.card {
+    position: relative;
+    flex: 1 1 100%;
+}
+//浮圖效果 Card hover effects
+.hot-item-card {
+    //transform: translateY(0);
+    // transition: transform .1s cubic-bezier(.4,0,.6,1),box-shadow .1s cubic-bezier(.4,0,.6,1),-webkit-transform .1s cubic-bezier(.4,0,.6,1);
+    // &:hover {
+    //     z-index: 1;
+    // }
+    transition: transform .5s;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+      content: '';
+      opacity: 0;
+      z-index: -1;
+    }
+  
+    &:hover,&:focus {
+      transform: scale3d(1.006, 1.006, 1);
+  
+      &::after {
+        opacity: 1;
+      }
+    }
+}
+
+.hot-img {
+    //flex: 0 0 250px;
+    width: 250px;
+
+    img {
+        max-width: 100%;
+        height: 250px;
+        
+        vertical-align: middle;
+        box-sizing: border-box;
+      }
+    a {
+        display: block;
+    }
+}
+.hot-text {
+    margin: 10px 0 30px;
 }
 //========================Page1-web-page-introduction===========================
 .web-page-introduction {
@@ -206,6 +261,7 @@ a {
         background: mix($base-color,#fff,2%);
         padding-left: 40px;
         padding-bottom: 10px;
+        margin-right: 22px
     }
 
     .input-booking {
@@ -216,9 +272,10 @@ a {
         background: $base-color;
         color: mix($base-color,#fff,0%);
         margin: 30px 0;
+        cursor: pointer;
+
         &:focus {
             outline: none;//button外圍的藍框
-            
         }
     }
 }
@@ -240,7 +297,6 @@ a {
         height: 60px;
         line-height: 60px;
         text-align: center;
-        text-decoration: none;
         color: #fff;
         transition-property: background;
         transition-duration: .3s;
@@ -264,6 +320,11 @@ a {
     font-weight: bold;
     margin: 20px auto;
 
+    a {
+        &:hover {
+            color: mix($base-color,#fff,40%);
+        }
+    }
     span {
         color: mix($base-color,#fff,20%);
     }
@@ -350,6 +411,12 @@ a {
 }
 //=========================Page2(右下)-item-recommend===========================
 .item-recommend {
+    & > a {
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 20px 0;
+    }
     ul {
         @extend %nostyle-list;
         display: flex;
@@ -375,6 +442,10 @@ a {
     font-size: 1.2em;
     font-weight: bold;
     margin: 20px auto;
+
+    a {
+        color: $text-color;
+    }
 }
 //=========================Page3(上)-purchase-information===========================
 .cart-information table {
@@ -383,7 +454,7 @@ a {
         width: 100px;
         color: #8c9399;
         text-align: left;//文字置左
-        //border-bottom: 1px solid #a4acb3;
+        font-size: 1.1em;
     }
     td {
         width: 100px;
@@ -415,6 +486,7 @@ a {
     font-weight: bold;
     font-size: 1.2em;
     padding-left: 20px;
+
     span {
         display: inline-block;
         padding: 0 0 10px;
@@ -433,6 +505,7 @@ a {
 .settle-block {
     height: 200px;
     padding: 20px 0;
+    font-weight: bold;
     td {
         padding: 10px 0;
     }
@@ -459,9 +532,11 @@ a {
 }
 
 .discount-number {
-    width: 150px;
+    width: 130px;
     height: 30px;
+    padding: 1px 10px;
 }
+
 
 .settle-button {
     width: 300px;
@@ -470,10 +545,22 @@ a {
     padding: 0 0;
     background: $base-color;
     color: mix($base-color,#fff,0%);
-    margin: 15px 0 25px;
+    margin: 15px 25px;
     float: right;
     cursor: pointer;//游標變手指圖
     &:focus {
         outline: none;//button外圍的藍框
+    }
+}
+@media screen and (max-width:1140px){
+    .container {
+        width: 820px;
+    }
+    .top-menu {
+     flex: 0 0 300px;
+
+     a {
+         width: 100px;
+     }
     }
 }
