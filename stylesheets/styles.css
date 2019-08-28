@@ -476,7 +476,7 @@ a {
 .index-image {
   height: 500px;
   /* background: url(http://placekitten.com/g/1080/500) center center no-repeat; */
-  background: url('https://yulingbs2019.azurewebsites.net/images/index-image.jpg') center center no-repeat;
+  background: url('https://yulingbs2019.azurewebsites.net/images/index-image01.jpg') center center no-repeat;
   /*置中,圖不重複填滿*/
   background-size: cover;
   /*圖片滿版*/
